@@ -36,18 +36,22 @@ function App() {
 
   return (
     <div>
-      <h1>My Memo</h1>
+      <h1>My todos</h1>
+      <h5>New Todo</h5>
+      
       <button onClick={addTodo}>Add Todo</button>
-      <span>{count}</span>
-      <button onClick={incrementCount}>Increment</button>
-
+      
+     
+      <div>
+       <span>Count:</span>{count}<button onClick={incrementCount}>+</button>
+      </div>
       <input
         type="text"
         placeholder="Enter text (greater than 5 characters)"
         value={inputText}
         onChange={handleInputChange}
       />
-      <button onClick={addItem}>Submit</button>
+      <button onClick={addItem}>Add Skill</button>
 
       <ul>
         {todos.map((todo, index) => (
